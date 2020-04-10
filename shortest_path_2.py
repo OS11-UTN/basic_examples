@@ -22,7 +22,7 @@ print('## Optimizer inputs ## \n'
       'b_eq demand-supply vector: %s \n'
       'Bounds of each X arc variable: %s \n' % (C, Aeq, beq, bounds))
 
-for name_method in 'interior-point', 'simplex':
+for name_method in 'interior-point', 'revised simplex':
     # OPTIMIZE:
     res = linprog(C, A_eq=Aeq, b_eq=beq, bounds=bounds, method=name_method)
 
